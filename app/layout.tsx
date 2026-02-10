@@ -21,10 +21,10 @@ const fontStyleOptimization = `
 `;
 
 export const metadata: Metadata = {
-  title: "7li-AI",
+  title: "7li-免费AI助手",
   description: "Your personal ChatGPT Chat Bot.",
   appleWebApp: {
-    title: "7li-AI",
+    title: "7li-免费AI助手",
     statusBarStyle: "default",
   },
 };
