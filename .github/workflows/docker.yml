@@ -25,7 +25,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: tianzhentech/chatgpt-next-web
+          images: 15732060266/chatgpt-neat-web
           tags: |
             type=raw,value=latest
             type=ref,event=tag
