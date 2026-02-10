@@ -1,6 +1,6 @@
 {
-  "name": "NeatChat",
-  "short_name": "NeatChat",
+  "name": "7li-AI",
+  "short_name": "7li-AI",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -14,7 +14,7 @@
     }
   ],
   "start_url": "/",
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#4A90E2",
+  "background_color": "#4A90E2",
   "display": "standalone"
 }

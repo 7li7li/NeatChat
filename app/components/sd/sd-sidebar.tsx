@@ -1,5 +1,5 @@
 import { IconButton } from "@/app/components/button";
-import GithubIcon from "@/app/icons/github.svg";
+import HomeIcon from "@/app/icons/home.svg";
 import SDIcon from "@/app/icons/sd.svg";
 import ReturnIcon from "@/app/icons/return.svg";
 import HistoryIcon from "@/app/icons/history.svg";
@@ -123,7 +123,7 @@ export function SideBar(props: { className?: string }) {
       <SideBarTail
         primaryAction={
           <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
-            <IconButton icon={<GithubIcon />} shadow />
+            <IconButton icon={<HomeIcon />} shadow />
           </a>
         }
         secondaryAction={
