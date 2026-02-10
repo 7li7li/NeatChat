@@ -120,29 +120,3 @@
 | **正式发行版** | ✅ 稳定 | `vX.Y.Z`                         | ✔️ 生产 | 由预发行稳定后诞生 | 合并原mini分支特性 |
 | preview分支    | 🚫 废弃 | -                                | -      | 已合并到main分支   | 功能由预发行版承接 |
 | mini分支       | 🚫 废弃 | -                                | -      | 特性已整合到正式版 | 不再独立维护       |
-
-## 💝 赞助支持
-
-本项目不求赞助，如果有可能的话，可以支持我一些硅基流动或者火山引擎赠金，我会更好的支持相关系列模型，或者日后考虑开设公益站给有需要的人使用，欢迎各位佬友赞助。
-
-| 平台名称   | 直达链接                                            |
-| ---------- | --------------------------------------------------- |
-| ✅ 硅基流动 | [点击注册](https://cloud.siliconflow.cn/i/tX3hT0Ly) |
-| 🚀 火山引擎 | [立即访问](https://volcengine.com/L/i5QyNFSX)       |
-
-
-[![image](https://raw.githubusercontent.com/tianzhentech/static/main/images/20250409181441.png)](https://yxvm.com/)
-
-[NodeSupport](https://github.com/NodeSeekDev/NodeSupport)赞助了本项目
-
-
-
-<a>
-
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=tianzhentech/NeatChat&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=tianzhentech/NeatChat&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=tianzhentech/NeatChat&type=Date" />
- </picture>
-
-</a>
