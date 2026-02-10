@@ -1,6 +1,7 @@
-export const OWNER = "tianzhentech";
+export const OWNER = "7li7li";
 export const REPO = "NeatChat";
-export const REPO_URL = `https://github.com/${OWNER}/${REPO}`;
+export const REPO_URL = `https://www.7li7li.cn/`;
+export const DONATE_URL = `https://www.7li7li.cn/support`;
 export const PLUGINS_REPO_URL = `https://github.com/ChatGPTNextWeb/NextChat-Awesome-Plugins`;
 export const ISSUE_URL = `https://github.com/${OWNER}/${REPO}/issues`;
 export const UPDATE_URL = `${REPO_URL}#keep-updated`;

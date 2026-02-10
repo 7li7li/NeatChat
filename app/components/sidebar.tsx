@@ -4,7 +4,8 @@ import styles from "./home.module.scss";
 
 import { IconButton } from "./button";
 import SettingsIcon from "../icons/settings.svg";
-import GithubIcon from "../icons/github.svg";
+import HomeIcon from "../icons/home.svg";
+import DonateIcon from "../icons/donate.svg";
 import AddIcon from "../icons/add.svg";
 import DeleteIcon from "../icons/delete.svg";
 import MaskIcon from "../icons/mask.svg";
@@ -26,6 +27,7 @@ import {
   Path,
   PLUGINS,
   REPO_URL,
+  DONATE_URL,
 } from "../constant";
 
 import { Link, useNavigate } from "react-router-dom";
@@ -284,8 +286,8 @@ export function SideBar(props: { className?: string }) {
       {...props}
     >
       <SideBarHeader
-        title="NeatChat"
-        subTitle="A Better AI assistant."
+        title="7li-AI"
+        subTitle="本站由7li7i提供支持."
         logo={<NeatIcon width={44} height={44} />}
         shouldNarrow={shouldNarrow}
       >
@@ -374,9 +376,14 @@ export function SideBar(props: { className?: string }) {
               <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
                 <IconButton
                   aria={Locale.Export.MessageFromChatGPT}
-                  icon={<GithubIcon />}
+                  icon={<HomeIcon />}
                   shadow
                 />
+              </a>
+            </div>
+            <div className={styles["sidebar-action"]}>
+              <a href={DONATE_URL} target="_blank" rel="noopener noreferrer">
+                <IconButton aria="打赏小站" icon={<DonateIcon />} shadow />
               </a>
             </div>
           </>
