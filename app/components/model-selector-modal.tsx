@@ -212,7 +212,7 @@ export function ModelSelectorModal(props: {
       const customModelIds = currentModelList.filter((id) => id !== "-all");
 
       // 从远程获取
-      const configResponse = await fetch("/api/config");
+      const configResponse = await fetch("/api/config", { cache: "no-store" });
       const configData = await configResponse.json();
 
       // 检查是否启用了自定义接口
@@ -316,7 +316,7 @@ export function ModelSelectorModal(props: {
         const baseUrl = configData.baseUrl || "https://api.openai.com";
 
         // 检查服务端是否设置了API密钥
-        if (configData.apiKey !== "已设置") {
+        if (!configData.apiKey) {
           showToast(Locale.Settings.Access.CustomModel.ApiKeyRequired);
           setLoading(false);
           return;

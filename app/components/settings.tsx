@@ -581,7 +581,7 @@ function useServerCustomModels() {
 
   useEffect(() => {
     // 从服务端获取 CUSTOM_MODELS 环境变量
-    fetch("/api/config")
+    fetch("/api/config", { cache: "no-store" })
       .then((res) => res.json())
       .then((data) => {
         if (data.customModels && !config.customModels) {

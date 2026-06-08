@@ -4,6 +4,9 @@ let a="useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict";let nan
 
 self.addEventListener("activate", function (event) {
   console.log("ServiceWorker activated.");
+  event.waitUntil(
+    caches.delete(CHATGPT_NEXT_WEB_CACHE).then(() => self.clients.claim()),
+  );
 });
 
 self.addEventListener("install", function (event) {

@@ -218,9 +218,11 @@ export const useAccessStore = createPersistStore(
       fetchState = 1;
       fetch("/api/config", {
         method: "post",
+        cache: "no-store",
         body: null,
         headers: {
           ...getHeaders(),
+          "Cache-Control": "no-store",
         },
       })
         .then((res) => res.json())

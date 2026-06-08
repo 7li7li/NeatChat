@@ -7,6 +7,7 @@ import type { Metadata, Viewport } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { getServerSideConfig } from "./config/server";
 import { McpInitializer } from "./components/mcp-initializer";
+import { DeploymentRefresher } from "./components/deployment-refresher";
 const serverConfig = getServerSideConfig();
 
 // 添加字体优化
@@ -73,6 +74,7 @@ export default function RootLayout({
       </head>
       <body suppressHydrationWarning={true}>
         <McpInitializer />
+        <DeploymentRefresher />
         {children}
         {serverConfig?.isVercel && (
           <>
