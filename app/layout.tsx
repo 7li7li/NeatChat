@@ -8,6 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { getServerSideConfig } from "./config/server";
 import { McpInitializer } from "./components/mcp-initializer";
 import { DeploymentRefresher } from "./components/deployment-refresher";
+import { StaticAssetRecoveryScript } from "./components/static-asset-recovery-script";
 const serverConfig = getServerSideConfig();
 
 // 添加字体优化
@@ -48,6 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <StaticAssetRecoveryScript />
         <meta name="config" content={JSON.stringify(getClientConfig())} />
         <meta
           name="viewport"

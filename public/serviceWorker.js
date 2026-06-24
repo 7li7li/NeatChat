@@ -49,8 +49,35 @@ async function remove(request, url) {
   return jsonify({ code: 0 })
 }
 
+async function notifyStaticAssetMissing(url) {
+  const clients = await self.clients.matchAll({
+    includeUncontrolled: true,
+    type: "window",
+  });
+
+  for (const client of clients) {
+    client.postMessage({
+      type: "NEXT_STATIC_ASSET_MISSING",
+      url,
+    });
+  }
+}
+
+async function fetchStaticAsset(request) {
+  const response = await fetch(request);
+  if (response.status === 404 || response.status === 410) {
+    await notifyStaticAssetMissing(request.url);
+  }
+  return response;
+}
+
 self.addEventListener("fetch", (e) => {
   const url = new URL(e.request.url);
+  if (e.request.method === "GET" && /^\/_next\/static\//.test(url.pathname)) {
+    e.respondWith(fetchStaticAsset(e.request));
+    return;
+  }
+
   if (/^\/api\/cache/.test(url.pathname)) {
     if ('GET' == e.request.method) {
       e.respondWith(caches.match(e.request))

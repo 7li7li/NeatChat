@@ -24,7 +24,10 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-RUN yarn build
+RUN COMMIT_DATE="$(git log -1 --format='%at000' --date=unix 2>/dev/null || echo unknown)" && \
+    COMMIT_HASH="$(git rev-parse HEAD 2>/dev/null || echo unknown)" && \
+    printf '{"commitDate":"%s","commitHash":"%s"}\n' "$COMMIT_DATE" "$COMMIT_HASH" > app/config/build-info.json && \
+    yarn build
 
 FROM base AS runner
 WORKDIR /app

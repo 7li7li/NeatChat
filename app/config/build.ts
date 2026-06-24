@@ -1,5 +1,6 @@
 import tauriConfig from "../../src-tauri/tauri.conf.json";
 import { DEFAULT_INPUT_TEMPLATE } from "../constant";
+import buildInfo from "./build-info.json";
 
 export const getBuildConfig = () => {
   if (typeof process === "undefined") {
@@ -12,27 +13,16 @@ export const getBuildConfig = () => {
   const isApp = !!process.env.BUILD_APP;
   const version = "v" + tauriConfig.package.version;
 
-  const commitInfo = (() => {
-    try {
-      const childProcess = require("child_process");
-      const commitDate: string = childProcess
-        .execSync('git log -1 --format="%at000" --date=unix')
-        .toString()
-        .trim();
-      const commitHash: string = childProcess
-        .execSync('git log --pretty=format:"%H" -n 1')
-        .toString()
-        .trim();
-
-      return { commitDate, commitHash };
-    } catch (e) {
-      console.error("[Build Config] No git or not from git repo.");
-      return {
-        commitDate: "unknown",
-        commitHash: "unknown",
-      };
-    }
-  })();
+  const commitInfo = {
+    commitDate:
+      process.env.COMMIT_DATE ||
+      process.env.NEXT_PUBLIC_COMMIT_DATE ||
+      buildInfo.commitDate,
+    commitHash:
+      process.env.COMMIT_HASH ||
+      process.env.NEXT_PUBLIC_COMMIT_HASH ||
+      buildInfo.commitHash,
+  };
 
   return {
     version,

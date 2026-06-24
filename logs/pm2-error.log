@@ -20,3 +20,28 @@
 2026-02-10 16:20:41 +08:00:  ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
 2026-02-10 16:26:34 +08:00: (node:33408) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
 (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-02-10 22:26:45 +08:00:  ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
+2026-02-24 11:31:57 +08:00:  ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
+2026-02-24 11:32:04 +08:00: (node:61732) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+2026-02-24 14:29:36 +08:00: 2026-02-24 14:29:36 +08:00: 2026-02-24 14:29:37 +08:00: 2026-02-24 14:29:37 +08:00: 2026-02-24 14:29:37 +08:00: Attempted to get item "app-config" from localStorage, but localStorage is not available.
+2026-02-24 14:29:37 +08:00: 2026-02-24 14:29:37 +08:00: 2026-02-24 14:29:37 +08:00: 2026-02-24 14:29:37 +08:00: 2026-02-24 14:29:37 +08:00: Attempted to get item "lang" from localStorage, but localStorage is not available.
+2026-02-24 14:29:37 +08:00: 2026-02-24 14:29:37 +08:00: 2026-02-24 14:29:37 +08:00: Attempted to get item "chat-update" from localStorage, but localStorage is not available.
+2026-02-24 14:29:37 +08:00: 2026-02-24 14:29:37 +08:00: 2026-02-24 14:29:37 +08:00: Attempted to get item "access-control" from localStorage, but localStorage is not available.
+2026-02-24 14:29:37 +08:00: 2026-02-24 14:29:37 +08:00: 2026-02-24 14:29:37 +08:00: Attempted to get item "chat-next-web-plugin" from localStorage, but localStorage is not available.
+2026-02-24 14:29:37 +08:00: Attempted to get item "mask-store" from localStorage, but localStorage is not available.
+2026-02-24 14:29:37 +08:00: Attempted to get item "lang" from localStorage, but localStorage is not available.
+2026-02-24 14:29:37 +08:00: Attempted to get item "chat-next-web-store" from localStorage, but localStorage is not available.
+2026-02-24 14:29:37 +08:00: skip setItem app-config
+2026-02-24 14:29:37 +08:00: skip setItem chat-update
+2026-02-24 14:29:37 +08:00: skip setItem access-control
+2026-02-24 14:29:37 +08:00: skip setItem chat-next-web-plugin
+2026-02-24 14:29:37 +08:00: skip setItem mask-store
+2026-02-24 14:29:37 +08:00: skip setItem chat-next-web-store
+2026-02-24 14:29:37 +08:00: Attempted to set item "app-config" in localStorage, but localStorage is not available.
+2026-02-24 14:29:37 +08:00: Attempted to set item "chat-update" in localStorage, but localStorage is not available.
+2026-02-24 14:29:37 +08:00: Attempted to set item "access-control" in localStorage, but localStorage is not available.
+2026-02-24 14:29:37 +08:00: Attempted to set item "chat-next-web-plugin" in localStorage, but localStorage is not available.
+2026-02-24 14:29:37 +08:00: Attempted to set item "mask-store" in localStorage, but localStorage is not available.
+2026-02-24 14:29:37 +08:00: Attempted to set item "chat-next-web-store" in localStorage, but localStorage is not available.
+2026-02-24 14:29:38 +08:00: 2026-02-24 14:29:38 +08:00: 

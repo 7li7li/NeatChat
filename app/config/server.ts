@@ -83,6 +83,7 @@ declare global {
       DEFAULT_INPUT_TEMPLATE?: string;
 
       ENABLE_MCP?: string; // enable mcp functionality
+      DEBUG_SERVER_CONFIG?: string;
     }
   }
 }
@@ -105,11 +106,13 @@ function getApiKey(keys?: string) {
   const apiKeys = apiKeyEnvVar.split(",").map((v) => v.trim());
   const randomIndex = Math.floor(Math.random() * apiKeys.length);
   const apiKey = apiKeys[randomIndex];
-  if (apiKey) {
+  if (apiKey && process.env.DEBUG_SERVER_CONFIG === "true") {
+    const maskedKey =
+      apiKey.length > 8 ? `${apiKey.slice(0, 3)}...${apiKey.slice(-4)}` : "***";
     console.log(
       `[Server Config] using ${randomIndex + 1} of ${
         apiKeys.length
-      } api key - ${apiKey}`,
+      } api key (${maskedKey})`,
     );
   }
 

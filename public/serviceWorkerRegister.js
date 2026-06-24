@@ -27,5 +27,16 @@ if ("serviceWorker" in navigator) {
       console.log("ServiceWorker controllerchange");
       window.location.reload();
     });
+
+    navigator.serviceWorker.addEventListener("message", function (event) {
+      if (!event.data || event.data.type !== "NEXT_STATIC_ASSET_MISSING") {
+        return;
+      }
+      if (refreshing) return;
+      refreshing = true;
+      const url = new URL(window.location.href);
+      url.searchParams.set("__next_static_recover", Date.now().toString());
+      window.location.replace(url.toString());
+    });
   });
 }
